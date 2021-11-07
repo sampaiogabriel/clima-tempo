@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  background: rgb(119, 172, 241);
+  background: linear-gradient(
+    180deg,
+    rgba(119, 172, 241, 1) 0%,
+    rgba(14, 193, 210, 1) 38%,
+    rgba(255, 255, 255, 1) 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+.container {
+  width: 70vw;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  margin-bottom: 2%;
+}
+
+.search-box form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  width: 90%;
+  border-radius: 5px;
+}
+
+.search-box form input {
+  background: white;
+  border-radius: 5px 0px 0px 5px;
+  outline: none;
+  border: none;
+  padding: 5px;
+}
+
+.search-box form button {
+  background-color: white;
+  border-radius: 0px 5px 5px 0;
+  padding: 5px;
+  border: none;
+}
+
+.search-box form button img {
+  width: 13px;
+  background-color: white;
+}
+
+.city-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.city-info-temp {
+  display: flex;
+  flex-direction: row;
+}
+
+.city-info-temp-number {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.city-info-temp-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.city-info-temp-img p {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.city-info-temp img {
+  width: 40px;
+}
+
+.city-info-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.city-info-details-bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.city-info-details img {
+  width: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.city-info-name {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.city-info-date {
+  margin-top: 20px;
+}
+
+.city-forecast {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  padding: 1%;
+
+  justify-content: space-around;
+  align-items: flex-start;
+
+  width: 100%;
+}
+
+.city-pills-weather {
+  border-radius: 94px;
+  background: #e7f9fa;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.city-pills-weather img {
+  width: 30px;
+}
+
+.city-pills-weather p {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  color: #56b0e6;
+}
+
+/*Responsividade*/
+
+@media (max-width: 320px) {
+
+}
+
+@media (max-width: 375px) {
+  .search-box {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .city-info {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .city-info-details {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .city-info-name {
+    font-size: 25px;
+  }
+
+}
+
+@media (max-width: 425px) {
+}
+
+@media (max-width: 768px) {
+  .city-forecast {
+    overflow-y: auto;
+    float: left;
+  }
+
+  .city-pills-weather {
+    margin: 5px;
+  }
+}
