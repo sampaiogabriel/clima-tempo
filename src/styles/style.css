@@ -200,7 +200,7 @@ main {
   .search-box {
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin-bottom: 15%;
   }
 
   .city-info {
