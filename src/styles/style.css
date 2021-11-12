@@ -8,18 +8,30 @@ main {
   height: 100vh;
   width: 100vw;
   background: rgb(119, 172, 241);
-  background: linear-gradient(
-    180deg,
-    rgba(119, 172, 241, 1) 0%,
-    rgba(14, 193, 210, 1) 38%,
-    rgba(255, 255, 255, 1) 100%
-  );
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   color: white;
+}
+
+.background-day {
+  background: linear-gradient(
+    180deg,
+    rgba(119, 172, 241, 1) 0%,
+    rgba(14, 193, 210, 1) 38%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.background-night {
+  background: linear-gradient(
+    180deg,
+    rgba(62, 101, 135, 1) 0%,
+    rgba(28, 46, 60, 1) 63%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
 .container {
@@ -147,6 +159,8 @@ main {
   align-items: flex-start;
 
   width: 100%;
+  overflow-y: auto;
+    float: left;
 }
 
 .city-pills-weather {
@@ -158,6 +172,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  margin: 5px;
 }
 
 .city-pills-weather img {
@@ -174,7 +190,6 @@ main {
 /*Responsividade*/
 
 @media (max-width: 320px) {
-
 }
 
 @media (max-width: 375px) {
@@ -200,19 +215,9 @@ main {
   .city-info-name {
     font-size: 25px;
   }
-
 }
 
 @media (max-width: 425px) {
 }
 
-@media (max-width: 768px) {
-  .city-forecast {
-    overflow-y: auto;
-    float: left;
-  }
 
-  .city-pills-weather {
-    margin: 5px;
-  }
-}
