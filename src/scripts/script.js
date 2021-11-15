@@ -56,7 +56,18 @@ async function getMyIp(){
     })
 }
 
+function removeInfos(){    
+    removeBackground();
+}
+
+function removeBackground(){
+    const background = document.querySelector('main');
+    background.classList.remove('background-day');
+    background.classList.remove('background-night');
+}
+
 function fillCardWeather(city) {
+    removeInfos();
     changeBackgroundByDay(city.currently);
     changeInfoWeatherByCity(city);
     changeIconWeather(city.condition_slug);
@@ -65,7 +76,7 @@ function fillCardWeather(city) {
 
 function changeBackgroundByDay(day) {
     const background = document.querySelector('main');
-    day === 'day' ? background.classList.toggle('background-day') : background.classList.toggle('background-night');
+    day === 'day' ? background.classList.add('background-day') : background.classList.add('background-night');
 }
 
 function changeInfoWeatherByCity(city) {
@@ -85,6 +96,7 @@ function changeIconWeather(icon_condition) {
     const img = document.createElement("img");
     const temp_img = document.querySelector('#city-info-temp-img');
 
+    img.setAttribute('id', 'img-icon-weather')
     img.setAttribute('src', `./src/images/weather/${icon}`);
     temp_img.prepend(img);
 }
